@@ -1,9 +1,24 @@
-import Header from "./components/Header.js"
+import { Nav, Aboutus, Location, Footer, Service } from "./components";
 function App() {
   return (
-      <>
-        <Header/>
-      </>
+    <>
+      <main>
+        <Nav />
+        <section>
+          <Location />
+        </section>
+        <section>
+          <Service />
+        </section>
+        <section>
+          <Aboutus />
+        </section>
+        <section>
+          <Footer />
+        </section>
+      </main>
+
+    </>
   );
 }
 
