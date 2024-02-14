@@ -1,4 +1,4 @@
-import { Nav, Aboutus, Location, Footer, Service } from "./components";
+import { Nav, Aboutus, Location, Footer, Service,Hero } from "./components";
 function App() {
   return (
     <>
@@ -10,7 +10,10 @@ function App() {
         <section>
           <Service />
         </section>
-        <section>
+        <section className="padding-x padding-y">
+          <Hero/>
+        </section>
+        <section className="padding-x padding-y bg-slate-100">
           <Aboutus />
         </section>
         <section>

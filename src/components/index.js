@@ -3,6 +3,7 @@ import Aboutus from "../sections/Aboutus.js"
 import Footer from "../sections/Footer.js"
 import Location from "../sections/Location.js"
 import Service from "../sections/Service.js"
+import Hero from "../sections/Hero.js"
 
 
 export{
@@ -11,4 +12,5 @@ export{
     Footer,
     Location,
     Service,
+    Hero,
 }
