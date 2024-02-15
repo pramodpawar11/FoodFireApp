@@ -1,9 +1,10 @@
 
 const Location = () => {
   return (
-    <section className="h-screen flex items-center justify-center ">
+    <section className="h-screen flex items-center justify-center">
       <div className="absolute inset-0 overflow-hidden padding-t  ">
-        <img className="w-full h-full object-cover object-center" src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2lzMTYwNjItaW1hZ2Uta3d2eWZrd3IuanBn.jpg" />
+        <div className="absolute w-full h-full object-cover object-center max-sm:mt-10 bg-black opacity-50 "></div>
+        <img className="w-full h-full object-cover object-center max-sm:mt-10" src="https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA1L2lzMTYwNjItaW1hZ2Uta3d2eWZrd3IuanBn.jpg" />
       </div>
       <div className="absolute flex items-center justify-center flex-col">
         <div className="text-center">

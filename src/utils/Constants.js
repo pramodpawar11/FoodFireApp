@@ -1,3 +1,6 @@
+import facebook from "../assests/icons/facebook.svg"
+import instagram from "../assests/icons/instagram.svg"
+import twitter from "../assests/icons/twitter.svg"
 export const footerLinks = [
     {
         title: "Get to know us",
@@ -26,8 +29,15 @@ export const footerLinks = [
     {
         title: "Get in touch",
         links: [
-            { name: "customer@vista.com", link: "mailto:customer@vista.com" },
+            { name: "customer@Yumhub.com", link: "mailto:customer@vista.com" },
             { name: "+92554862354", link: "tel:+92554862354" },
         ],
     },
+];
+
+
+export const socialMedia = [
+    { src: facebook, alt: "facebook logo" },
+    { src: twitter, alt: "twitter logo" },
+    { src: instagram, alt: "instagram logo" },
 ];

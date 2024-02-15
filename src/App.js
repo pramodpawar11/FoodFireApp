@@ -3,8 +3,10 @@ function App() {
   return (
     <>
       <main>
+        <section className="">
         <Nav />
-        <section>
+        </section>
+        <section className="">
           <Location />
         </section>
         <section>
@@ -16,8 +18,8 @@ function App() {
         <section className="padding-x padding-y bg-slate-100">
           <Aboutus />
         </section>
-        <section>
-          <Footer />
+        <section className="padding-x bg-black padding-t pb-8">
+          <Footer  />
         </section>
       </main>
 
