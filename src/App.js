@@ -3,7 +3,7 @@ function App() {
   return (
     <>
       <main>
-        <section className="">
+        <section className="h-10">
         <Nav />
         </section>
         <section className="">
