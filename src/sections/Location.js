@@ -21,7 +21,7 @@ const Location = () => {
         </div>
 
 
-        <button className="rounded-2xl py-2 px-[30%] mt-5 cursor-pointer text-white font-bold bg-coral-red outline-none border-none hover:bg-red-500" onClick={handleClick}>Select State</button>
+        <button className="rounded-2xl py-2 px-[30%] mt-5 cursor-pointer text-white font-bold bg-coral-red outline-none border-none hover:bg-red-500" onClick={handleClick}>Select City</button>
       </div>
     
         {showModal && <StateModal closeModal = {()=>setShowModal(false)}/>}

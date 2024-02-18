@@ -1,14 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Homepage from "./Homepage.js"
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Surat from './components/suratComponents/Surat.js';
 
+const Applayout = ()=>{
+  return(
+  <>
+
+  </>
+  )
+}
+
+const appRouter = createBrowserRouter([
+  {
+    path:"/",
+    element:<Homepage/>
+  },
+  {
+    path:"/surat",
+    element:<Surat/>
+  }
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+root.render(<RouterProvider router={appRouter} />);
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

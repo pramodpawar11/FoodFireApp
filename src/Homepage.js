@@ -1,9 +1,10 @@
 import { Nav, Aboutus, Location, Footer, Service,Hero } from "./components";
-function App() {
+
+const Homepage = () => {
   return (
     <>
       <main>
-        <section className="h-10">
+        <section className="h-3">
         <Nav />
         </section>
         <section className="">
@@ -24,7 +25,7 @@ function App() {
       </main>
 
     </>
-  );
+  )
 }
 
-export default App;
+export default Homepage
