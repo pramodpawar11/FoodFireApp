@@ -15,7 +15,7 @@ const WhatsInMind = () => {
   if (whatsMind.length == 0) return;
   return (
     <div className="max-container padding-xx w-full">
-      <div className="flex relative items-center mt-2">
+      <div className="flex items-center mt-2">
         <MdChevronLeft className="cursor-pointer opacity-50 hover:opacity-100" onClick={slideLeft} size={40} />
         <div id="slider" className="w-full overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide">
           {
