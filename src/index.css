@@ -31,6 +31,9 @@
   .padding-x {
     @apply sm:px-16 px-8;
   }
+  .padding-xx {
+    @apply sm:px-24 px-12
+  }
 
   .padding-y {
     @apply sm:py-24 py-12;

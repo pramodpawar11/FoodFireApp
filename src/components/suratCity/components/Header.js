@@ -1,7 +1,7 @@
-import { Mainlogo_URL } from "../../utils/Constants";
-import humburger from "../../assests/icons/hamburger.svg";
+import { Mainlogo_URL } from "../../../utils/Constants";
+import humburger from "../../../assests/icons/hamburger.svg";
 import { useState } from "react";
-import HumburgerModal from "../HumburgerModal";
+import HumburgerModal from "../utils/HumburgerModal";
 import { BiSolidOffer } from "react-icons/bi";
 
 
