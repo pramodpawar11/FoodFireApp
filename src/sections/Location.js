@@ -3,7 +3,6 @@ import StateModal from "../components/StateModal.js"
 
 const Location = () => {
   const [showModal,setShowModal] = useState(false);
-  console.log(showModal);
   const handleClick = ()=>{
       setShowModal(true);
   }

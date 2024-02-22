@@ -4,9 +4,11 @@ import WhatsInMind from "./WhatsInMind.js"
 const Surat = () => {
   return (
     <div>
-        <Header/>
+      <Header/>
+    <div className="max-container padding-xx">
         <WhatsInMind/>
         <TopRestaurant/>
+    </div>
     </div>
   )
 }

@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 const StateModal = ({ closeModal }) => {
   const modalRef = useRef();
-  console.log(modalRef.current);
   const closeBackground = (e) => {
     if (modalRef.current === e.target) closeModal();
   }
