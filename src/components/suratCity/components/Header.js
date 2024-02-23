@@ -11,7 +11,7 @@ const Header = () => {
         setShowHumburger(true);
     }
     return (
-        <section className="padding-x w-full shadow-md ">
+        <section className="padding-x w-full shadow-md  ">
             <nav className="flex  justify-between items-center max-container ">
                 <div>
                 <img src={Mainlogo_URL} className="h-24 cursor-pointer  duration-150 hover:scale-105" />
