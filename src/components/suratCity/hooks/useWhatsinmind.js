@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { SwiggyData_URL } from "../../../utils/Constants";
 import { useDispatch } from "react-redux";
-import { adddeliveryRestaurants, addtopRestaurants } from "../../../utils/swiggyApiSlice";
+import { addbestPlacesToEar, adddeliveryRestaurants, addtopRestaurants } from "../../../utils/swiggyApiSlice";
 
 const useWhatsinmind = () => {
     const [whatsMind, setWathsMind] = useState([]);
@@ -14,6 +14,7 @@ const useWhatsinmind = () => {
         const json = await respose.json();
         dispatch(addtopRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants));
         dispatch(adddeliveryRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants));
+        dispatch(addbestPlacesToEar(json.data.cards[6].card.card.brands));
         setWathsMind(json.data.cards[0].card.card.imageGridCards.info);
     }
     return whatsMind;

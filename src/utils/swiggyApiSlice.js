@@ -4,6 +4,7 @@ const swiggyApiSlice = createSlice({
     initialState:{
         topRestaurants:null,
         deliveryRestaurants:null,
+        bestPlacesToEat:null,
     },
     reducers:{
         addtopRestaurants:(state,action)=>{
@@ -11,8 +12,11 @@ const swiggyApiSlice = createSlice({
         },
         adddeliveryRestaurants:(state,action)=>{
             state.deliveryRestaurants=action.payload
+        },
+        addbestPlacesToEar:(state,action)=>{
+            state.bestPlacesToEat = action.payload
         }
     }
 })
-export const {addtopRestaurants,adddeliveryRestaurants} = swiggyApiSlice.actions;
+export const {addtopRestaurants,adddeliveryRestaurants,addbestPlacesToEar} = swiggyApiSlice.actions;
 export default swiggyApiSlice.reducer;
