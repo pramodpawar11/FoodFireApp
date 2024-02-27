@@ -1,6 +1,7 @@
 import { WhatsINMind_URL } from "../../../utils/Constants";
 import useWhatsinmind from "../hooks/useWhatsinmind";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import Shimmer from "./Shimmer";
 
 const WhatsInMind = () => {
     const whatsMind = useWhatsinmind();
@@ -12,7 +13,7 @@ const WhatsInMind = () => {
     var slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 700
   }
-  if (whatsMind.length == 0) return;
+  if (whatsMind.length == 0)return <Shimmer/>;
   return (
     <div className=" w-full">
     <h1 className="font-montserrat leading-normal font-bold  capitalize text-xl text-black p-2  flex items-center">What's on your mind?</h1>

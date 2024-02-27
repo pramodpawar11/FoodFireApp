@@ -2,19 +2,19 @@ import { FaSearch } from "react-icons/fa";
 import { FaFilter } from "react-icons/fa6";
 import sideArrows from "../../../assests/switch.png"
 import { useSelector } from "react-redux";
-// import DeliveryRestaurantsCards from "./DeliveryRestaurantsCards.js";
 import TopReataurantsCards from "./TopReataurantsCards.js";
 import { useState } from "react";
 import DeliveryRestaurantsModal from "../utils/DeliveryRestaurantsModal.js";
 
-const DeliveryRestaurants = () => {
+const DeliveryRestaurants = () => { 
   const [search,setSearch] = useState("");
   const [deliveryModal,setDeliveryModal] = useState(false);
   
   const topRestaurantsData = useSelector((store) => store.swiggyData.topRestaurants);
-  const deliveryRestaurants = useSelector((store) => store.swiggyData.deliveryRestaurants);
+  const mergedRestaurants = useSelector((store) => store.swiggyData.mergedRestaurants);
   if (topRestaurantsData == null) return;
-  if (deliveryRestaurants == null) return;
+  if (mergedRestaurants == null) return;
+
   const handleFilter = ()=>{
     setDeliveryModal(true);
   }
@@ -30,22 +30,15 @@ const DeliveryRestaurants = () => {
       <div className="padding-t">
       <span>
         { 
-          deliveryRestaurants.filter((card)=>{
+          mergedRestaurants.filter((card)=>{
             return search.toLowerCase()===""?card:card.info.name.toLowerCase().includes(search);
-          }).map((card,index) => <TopReataurantsCards key={index} card={card} />)
-        }
-      </span>
-      <span>
-        {
-          topRestaurantsData.filter((card)=>{
-            return search.toLocaleLowerCase()===""?card:card.info.name.toLocaleLowerCase().includes(search);
           }).map((card,index) => <TopReataurantsCards key={index} card={card} />)
         }
       </span>
       </div>
       <div>
       {
-        deliveryModal &&  <DeliveryRestaurantsModal closeModal = {()=>setDeliveryModal(false)} deliveryRestaurants={deliveryRestaurants} topRestaurants={topRestaurantsData} />
+        deliveryModal &&  <DeliveryRestaurantsModal closeModal = {()=>setDeliveryModal(false)} mergedRestaurants={mergedRestaurants} />
       }
       </div>
 
