@@ -19,7 +19,12 @@ const DeliveryRestaurantsModal = ({ closeModal, mergedRestaurants }) => {
             dispatch(addmergedRestaurants(sortedResult));
         }
         else if(selectedValue === "lowToHigh"){
-            
+            const sortedResult = [...mergedRestaurants].sort((a, b)=> parseInt(a.info.costForTwo.split(' ')[0].substring(1)) - parseInt(b.info.costForTwo.split(' ')[0].substring(1)));
+            dispatch(addmergedRestaurants(sortedResult));
+        }
+        else if(selectedValue === "HighToLow"){
+            const sortedResult = [...mergedRestaurants].sort((a, b)=> parseInt(b.info.costForTwo.split(' ')[0].substring(1)) - parseInt(a.info.costForTwo.split(' ')[0].substring(1)));
+            dispatch(addmergedRestaurants(sortedResult));
         }
     }, [selectedValue]);
 
